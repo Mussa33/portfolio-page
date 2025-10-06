@@ -1,36 +1,126 @@
-.profile-img--corner {
-	position: absolute;
-	top: 32px;
-	right: 32px;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	object-fit: cover;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-	border: 3px solid #fff;
-	z-index: 10;
-}
-
+/* Lustiger Zug SVG Hintergrund im Header */
 header {
 	position: relative;
+	overflow: visible;
 }
-/* Reset some default styles */
-html, body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Segoe UI', Arial, sans-serif;
-	background: #f5f6fa;
-	color: #222;
+header .profile-img,
+header h1,
+header .subtitle,
+header .meta {
+	position: relative;
+	z-index: 1;
 }
-
-header {
-	background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+/* Kontakt im Footer rechtsbündig */
+.footer-contact {
+	text-align: right;
+	padding-right: 32px;
 	color: #fff;
-	padding: 40px 0 20px 0;
-	text-align: center;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+.list {
+	display: block;
+	padding-left: 0;
+	margin: 0 auto;
+	max-width: 600px;
+}
+.list li {
+	display: list-item;
+	margin-bottom: 12px;
+	background: #fff9c4;
+	color: #4e54c8;
+	padding: 12px 18px;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+	text-align: left;
+	list-style: disc inside;
+}
+.timeline {
+	display: block;
+	padding-left: 0;
+	margin: 0 auto;
+	max-width: 600px;
+}
+.timeline li {
+	display: list-item;
+	margin-bottom: 18px;
+	background: #e0f7fa;
+	color: #4e54c8;
+	padding: 16px 18px;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+	text-align: left;
+	list-style: disc inside;
+}
+.highlights {
+	display: block;
+	padding-left: 0;
+	margin: 0 auto;
+	max-width: 600px;
+}
+.highlights ul {
+	padding-left: 0;
+}
+.highlights li {
+	display: list-item;
+	margin-bottom: 8px;
+	background: #ffe4ec;
+	color: #4e54c8;
+	padding: 8px 18px;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+	text-align: left;
+	list-style: disc inside;
+}
+.badges {
+	display: block;
+	padding-left: 0;
+	margin: 0 auto;
+	max-width: 400px;
+}
+.badges li {
+	display: list-item;
+	margin-bottom: 8px;
+	background: #e1bee7;
+	color: #4e54c8;
+	padding: 8px 18px;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+	text-align: left;
+	list-style: disc inside;
+}
+html, body {
+    margin: 0;
+	.profil-container {
+		background: #ffe4ec;
+		text-align: center;
+	}
+	.erfahrung-container {
+		background: #e0f7fa;
+		text-align: center;
+	}
+	.ausbildung-container {
+		background: #fff9c4;
+		text-align: center;
+	}
+	.zertifikate-container {
+		background: #e1bee7;
+		text-align: center;
+	}
+	.faehigkeiten-container {
+		background: #c8e6c9;
+		text-align: center;
+	}
+	.kontakt-container {
+		background: #d1c4e9;
+		text-align: center;
+	}
 
 header h1 {
 	margin: 0;
@@ -43,12 +133,35 @@ nav {
 }
 
 nav a {
-	color: #fff;
-	text-decoration: none;
-	margin: 0 18px;
-	font-weight: 500;
-	font-size: 1.1rem;
-	transition: color 0.2s;
+section {
+    margin-bottom: 40px;
+    padding: 32px 0;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+#profil {
+	background: #f7fafc;
+	text-align: center;
+}
+#erfahrung {
+	background: #f0f4ff;
+	text-align: center;
+}
+#ausbildung {
+	background: #f9f7fd;
+	text-align: center;
+}
+#zertifikate {
+	background: #f6fff7;
+	text-align: center;
+}
+#faehigkeiten {
+	background: #f7faff;
+	text-align: center;
+}
+#portfolio {
+    background: #fff8f6;
 }
 
 nav a:hover {
@@ -64,17 +177,10 @@ nav a:hover {
 	padding: 32px;
 }
 
-section {
 	margin-bottom: 40px;
 }
 
-section h2 {
-	color: #4e54c8;
-	margin-bottom: 16px;
-	font-size: 2rem;
-	border-bottom: 2px solid #eee;
-	padding-bottom: 8px;
-}
+
 
 .profile-img {
 	width: 120px;
@@ -86,9 +192,23 @@ section h2 {
 }
 
 .skills {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 12px;
+	display: block;
+	padding-left: 0;
+	margin: 0 auto;
+	max-width: 400px;
+}
+.skills li {
+	display: list-item;
+	margin-bottom: 8px;
+	background: #e0e1f6;
+	color: #4e54c8;
+	padding: 8px 18px;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: 500;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+	text-align: left;
+	list-style: disc inside;
 }
 
 .skill {
@@ -130,12 +250,13 @@ section h2 {
 }
 
 footer {
-	text-align: center;
+	text-align: left;
 	padding: 24px 0;
 	background: #4e54c8;
 	color: #fff;
 	margin-top: 40px;
 	border-radius: 0 0 12px 12px;
+	padding-left: 32px;
 }
 
 @media (max-width: 600px) {

@@ -5,41 +5,60 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Direkt zum Inhalt</a>
+  <!-- Direkt zum Inhalt entfernt -->
 
   <header role="banner">
-    <img src="pictures/portrait.png" alt="Profilbild Mussa Khan Afridi" class="profile-img profile-img--corner" />
-    <nav aria-label="Hauptnavigation">
-      <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false">Menü</button>
-      <ul id="nav-menu" hidden>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#erfahrung">Erfahrung</a></li>
-        <li><a href="#ausbildung">Ausbildung</a></li>
-        <li><a href="#zertifikate">Zertifikate</a></li>
-        <li><a href="#faehigkeiten">Fähigkeiten</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero" aria-labelledby="title">
-      <h1 id="title">Mussa Khan Afridi</h1>
-      <p class="subtitle">ICT-System-Spezialist · Abraxas Informatik AG · Zürich</p>
-      <ul class="meta" aria-label="Kurzinfos">
-        <li>Standort: Ittigen, Bern, Schweiz</li>
-        <li>Netzwerk: 156 Verbindungen · 160 Follower</li>
-        <li>Aktiv seit: Nov 2020 (4+ Jahre)</li>
-      </ul>
-      <div class="cta">
-        <a class="btn" href="#portfolio">Projekte ansehen</a>
-        <a class="btn btn--secondary" href="#kontakt">Kontakt</a>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 0; overflow: hidden;">
+      <!-- Lustiger Zug SVG Hintergrund -->
+      <div style="position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.35;">
+        <svg viewBox="0 0 900 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <rect x="0" y="120" width="900" height="30" fill="#ffd86b" />
+            <rect x="60" y="80" width="120" height="40" rx="12" fill="#fff" stroke="#4e54c8" stroke-width="3" />
+            <rect x="180" y="90" width="60" height="30" rx="8" fill="#e0f7fa" stroke="#4e54c8" stroke-width="2" />
+            <rect x="240" y="100" width="40" height="20" rx="6" fill="#ffe4ec" stroke="#4e54c8" stroke-width="2" />
+            <circle cx="90" cy="130" r="14" fill="#4e54c8" />
+            <circle cx="150" cy="130" r="14" fill="#4e54c8" />
+            <circle cx="200" cy="120" r="10" fill="#4e54c8" />
+            <circle cx="260" cy="120" r="10" fill="#4e54c8" />
+            <rect x="80" y="70" width="30" height="18" rx="4" fill="#ffd86b" stroke="#4e54c8" stroke-width="2" />
+            <ellipse cx="120" cy="70" rx="10" ry="6" fill="#e1bee7" />
+            <ellipse cx="210" cy="80" rx="8" ry="5" fill="#c8e6c9" />
+            <rect x="300" y="110" width="60" height="20" rx="6" fill="#fff9c4" stroke="#4e54c8" stroke-width="2" />
+            <circle cx="320" cy="130" r="10" fill="#4e54c8" />
+            <circle cx="350" cy="130" r="10" fill="#4e54c8" />
+            <!-- Rauchwolken -->
+            <ellipse cx="70" cy="60" rx="12" ry="8" fill="#fff" opacity="0.7" />
+            <ellipse cx="60" cy="50" rx="8" ry="5" fill="#fff" opacity="0.5" />
+            <ellipse cx="80" cy="55" rx="6" ry="4" fill="#fff" opacity="0.6" />
+            <!-- Gesicht -->
+            <circle cx="110" cy="95" r="6" fill="#ffd86b" />
+            <circle cx="115" cy="95" r="2" fill="#4e54c8" />
+            <circle cx="105" cy="95" r="2" fill="#4e54c8" />
+            <rect x="112" y="98" width="4" height="2" rx="1" fill="#4e54c8" />
+          </g>
+        </svg>
       </div>
-    </section>
+      <div style="position: relative; z-index: 1;">
+        <img src="pictures/portrait.png" alt="Profilbild Mussa Khan Afridi" class="profile-img" style="margin-bottom: 18px;" />
+        <h1 id="title" style="margin: 0; font-size: 2.5rem; letter-spacing: 2px;">Mussa Khan Afridi</h1>
+        <p class="subtitle" style="margin: 8px 0 0 0; font-size: 1.2rem;">ICT-Operations-Engineer · Abraxas Informatik AG · Zürich</p>
+        <ul class="meta" aria-label="Kurzinfos" style="list-style: none; padding: 0; margin: 16px 0 0 0;">
+          <li style="margin-bottom: 4px;">Standort: Spitalgasse 9,3005 Bern, Schweiz</li>
+          <li>Interessen: Ich mag Züge.</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main id="main">
+    <div style="text-align:center; margin: 32px 0;">
+      <button id="fun-btn" style="padding: 12px 24px; border-radius: 20px; background: #ffd86b; color: #222; font-weight: bold; border: none; cursor: pointer; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        That's my dog Lokki
+      </button>
+    </div>
     <!-- PROFIL -->
-    <section id="profil" aria-labelledby="profil-title">
+  <section id="profil" class="profil-container" aria-labelledby="profil-title">
       <h2 id="profil-title">Profil</h2>
       <p>
         Zielstrebiger ICT-System-Spezialist mit Schwerpunkt IP-Netzwerke und Systeme. 
@@ -57,9 +76,9 @@
     </section>
 
     <!-- ERFAHRUNG -->
-    <section id="erfahrung" aria-labelledby="erfahrung-title">
+    <section id="erfahrung" class="erfahrung-container" aria-labelledby="erfahrung-title">
       <h2 id="erfahrung-title">Berufserfahrung</h2>
-      <ol class="timeline">
+      <ul class="timeline">
         <li>
           <article>
             <h3>ICT-System-Spezialist <span class="at">· Abraxas Informatik AG</span></h3>
@@ -91,11 +110,11 @@
             <p>Grundausbildung Systemtechnik, Support und Betrieb in Kundenprojekten.</p>
           </article>
         </li>
-      </ol>
+      </ul>
     </section>
 
     <!-- AUSBILDUNG -->
-    <section id="ausbildung" aria-labelledby="ausbildung-title">
+  <section id="ausbildung" class="ausbildung-container" aria-labelledby="ausbildung-title">
       <h2 id="ausbildung-title">Ausbildung</h2>
       <ul class="list">
         <li>
@@ -110,7 +129,7 @@
     </section>
 
     <!-- ZERTIFIKATE -->
-    <section id="zertifikate" aria-labelledby="zertifikate-title">
+  <section id="zertifikate" class="zertifikate-container" aria-labelledby="zertifikate-title">
       <h2 id="zertifikate-title">Zertifikate</h2>
       <ul class="badges">
         <li><strong>Veeam Certified Engineer (VMCE)</strong> · Ausgestellt: Feb 2024</li>
@@ -118,7 +137,7 @@
     </section>
 
     <!-- FAEHIGKEITEN -->
-    <section id="faehigkeiten" aria-labelledby="faehigkeiten-title">
+  <section id="faehigkeiten" class="faehigkeiten-container" aria-labelledby="faehigkeiten-title">
       <h2 id="faehigkeiten-title">Fähigkeiten</h2>
       <ul class="skills">
         <li>IP-Netzwerke</li>
@@ -127,70 +146,24 @@
       </ul>
     </section>
 
-    <!-- PORTFOLIO (Projektanforderungen aus dem Modul) -->
-    <section id="portfolio" aria-labelledby="portfolio-title">
-      <h2 id="portfolio-title">Portfolio</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>GitHub Pages · öffentliche Portfoliopage</h3>
-          <p>Ko-Kriterium: Seite ist oeffentlich erreichbar. Responsiv, barrierearm, sauber dokumentierte Commits.</p>
-          <ul class="ticks" aria-label="Erfuellte Kriterien">
-            <li>Erreichbarkeit: <span aria-label="erfuellt">✅</span></li>
-            <li>Responsivitaet (Desktop/Tablet/Mobile): <span aria-label="erfuellt">✅</span></li>
-            <li>Codequalitaet & Modularitaet: <span aria-label="erfuellt">✅</span></li>
-            <li>Commit-History nachvollziehbar: <span aria-label="erfuellt">✅</span></li>
-            <li>Gestaltung & Usability: <span aria-label="erfuellt">✅</span></li>
-          </ul>
-          <!-- Optional: Link zur Live-Page / Repo -->
-          <!-- <p><a href="https://USERNAME.github.io/REPO" target="_blank" rel="noopener noreferrer">Live ansehen</a></p> -->
-        </article>
-
-        <!-- Beispielprojekt-Platzhalter -->
-        <article class="card">
-          <h3>Projekt A · Netzwerkmigration</h3>
-          <p>Kurzbeschreibung: Planung und Umsetzung einer IP-Netzwerk-Migration inkl. Ausfallschutz.</p>
-          <ul>
-            <li>Rolle: System-Spezialist</li>
-            <li>Stack: Routing, Switching, Monitoring</li>
-            <li>Outcome: Downtime &lt; 15 Minuten, dokumentierter Cutover</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Projekt B · Backup-Modernisierung</h3>
-          <p>Kurzbeschreibung: Einführung Veeam-basierter Backups, Härtung und Reporting.</p>
-          <ul>
-            <li>Rolle: Umsetzung & Betrieb</li>
-            <li>Schwerpunkte: Immutable Repos, Test-Restores</li>
-            <li>Outcome: RTO/RPO-Ziele erreicht</li>
-          </ul>
-        </article>
-      </div>
-
-      <aside class="security" aria-label="Sicherheitsleitlinien">
-        <h3>Sichere Umsetzung</h3>
-        <ul>
-          <li>Kein Inline-JavaScript/Styles (CSP-freundlich)</li>
-          <li>Externe Links mit <code>rel="noopener noreferrer"</code> bei <code>target="_blank"</code></li>
-          <li>Alt-Texte, Fokus-Ringe, Kontrast ≥ WCAG AA</li>
-          <li>Assets versionieren; minimale Berechtigungen</li>
-        </ul>
-      </aside>
-    </section>
 
     <!-- KONTAKT -->
-    <section id="kontakt" aria-labelledby="kontakt-title">
+  <section id="kontakt" class="kontakt-container" aria-labelledby="kontakt-title">
       <h2 id="kontakt-title">Kontakt</h2>
       <address>
         <p><strong>Mussa Khan Afridi</strong></p>
         <!-- Ersetzen/Ergaenzen Sie die Mail bei Bedarf -->
-        <p>E-Mail: <a href="mailto:kontakt@example.com">kontakt@example.com</a></p>
-        <p>Region: Ittigen · Bern · Schweiz</p>
+        <p>E-Mail: <a href="mailto:afrim1@bfh.ch">donottry@phishing.com</a></p>
+        <p>Region: Bern · Schweiz</p>
       </address>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p>&copy; <span data-year></span> Portfolio · Mussa Khan Afridi</p>
+  <footer role="contentinfo" style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <p style="margin: 0;">&copy; <span data-year></span> Portfolio · Mussa Khan Afridi</p>
+    <div class="footer-contact">
+  <a href="#" id="gorilla-link" style="color: #ffd86b; text-decoration: underline; font-weight: bold; font-size: 1.1rem;">Kamera aktivieren</a>
+    </div>
   </footer>
+  <script src="fun.js"></script>
 </body>
