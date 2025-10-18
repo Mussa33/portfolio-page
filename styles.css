@@ -210,6 +210,42 @@ section {
 	border-radius: 0;
 }
 
+/* Entfernt den weißen Strich vor Ausbildung */
+#ausbildung {
+	margin-top: 0 !important;
+}
+
+/* Entfernt den weißen Strich zwischen Berufserfahrung und Ausbildung */
+#erfahrung {
+	margin-bottom: 0 !important;
+}
+
+/* Entfernt den weißen Strich zwischen Ausbildung und Zertifikate */
+#ausbildung {
+	margin-bottom: 0 !important;
+}
+
+/* Entfernt den weißen Strich zwischen Zertifikate und Fähigkeiten */
+#zertifikate {
+	margin-bottom: 0 !important;
+}
+
+/* Entfernt den weißen Strich vor Kontakt */
+#kontakt {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/* Entfernt den weißen Strich zwischen Fähigkeiten und Kontakt */
+#faehigkeiten {
+	margin-bottom: 0 !important;
+}
+
+/* Entfernt den weißen Strich zwischen Kontakt und Footer */
+footer {
+	margin-top: 0 !important;
+}
+
 nav a:hover {
 	color: #ffd86b;
 }
