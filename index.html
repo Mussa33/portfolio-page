@@ -5,12 +5,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Direkt zum Inhalt entfernt -->
-
   <header role="banner">
-    <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 0; overflow: hidden;">
-      <!-- Lustiger Zug SVG Hintergrund -->
-      <div style="position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.35;">
+    <div class="header-wrapper">
+      <div class="header-background">
         <svg viewBox="0 0 900 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg">
           <g>
             <rect x="0" y="120" width="900" height="30" fill="#ffd86b" />
@@ -27,11 +24,9 @@
             <rect x="300" y="110" width="60" height="20" rx="6" fill="#fff9c4" stroke="#4e54c8" stroke-width="2" />
             <circle cx="320" cy="130" r="10" fill="#4e54c8" />
             <circle cx="350" cy="130" r="10" fill="#4e54c8" />
-            <!-- Rauchwolken -->
             <ellipse cx="70" cy="60" rx="12" ry="8" fill="#fff" opacity="0.7" />
             <ellipse cx="60" cy="50" rx="8" ry="5" fill="#fff" opacity="0.5" />
             <ellipse cx="80" cy="55" rx="6" ry="4" fill="#fff" opacity="0.6" />
-            <!-- Gesicht -->
             <circle cx="110" cy="95" r="6" fill="#ffd86b" />
             <circle cx="115" cy="95" r="2" fill="#4e54c8" />
             <circle cx="105" cy="95" r="2" fill="#4e54c8" />
@@ -39,12 +34,12 @@
           </g>
         </svg>
       </div>
-      <div style="position: relative; z-index: 1;">
-        <img src="pictures/portrait.png" alt="Profilbild Mussa Khan Afridi" class="profile-img" style="margin-bottom: 18px;" />
-        <h1 id="title" style="margin: 0; font-size: 2.5rem; letter-spacing: 2px;">Mussa Khan Afridi</h1>
-        <p class="subtitle" style="margin: 8px 0 0 0; font-size: 1.2rem;">ICT-Operations-Engineer · Abraxas Informatik AG · Zürich</p>
-        <ul class="meta" aria-label="Kurzinfos" style="list-style: none; padding: 0; margin: 16px 0 0 0;">
-          <li style="margin-bottom: 4px;">Standort: Spitalgasse 9,3005 Bern, Schweiz</li>
+      <div class="header-content">
+        <img src="pictures/portrait.png" alt="Profilbild Mussa Khan Afridi" class="profile-img" />
+        <h1>Mussa Khan Afridi</h1>
+        <p class="subtitle">ICT-Operations-Engineer · Abraxas Informatik AG · Zürich</p>
+        <ul class="meta" aria-label="Kurzinfos">
+          <li>Standort: Spitalgasse 9,3005 Bern, Schweiz</li>
           <li>Interessen: Ich mag Züge.</li>
         </ul>
       </div>
@@ -52,13 +47,11 @@
   </header>
 
   <main id="main">
-    <div style="text-align:center; margin: 32px 0;">
-      <button id="fun-btn" style="padding: 12px 24px; border-radius: 20px; background: #ffd86b; color: #222; font-weight: bold; border: none; cursor: pointer; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-        That's my dog Lokki
-      </button>
+    <div class="fun-btn-wrapper">
+      <button id="fun-btn">That's my dog Lokki</button>
     </div>
-    <!-- PROFIL -->
-  <section id="profil" class="profil-container" aria-labelledby="profil-title">
+
+    <section id="profil" class="profil-container" aria-labelledby="profil-title">
       <h2 id="profil-title">Profil</h2>
       <p>
         Zielstrebiger ICT-Operations-Engineer mit Schwerpunkt IP-Netzwerke und Systeme. 
@@ -74,103 +67,96 @@
         </ul>
       </aside>
     </section>
-    <!-- INTERAKTIVE KARTE & WETTER -->
-    <section id="extras" style="margin: 48px 0; text-align: center;">
+
+    <section id="extras">
       <h2>Arbeitsort und das Wetter dort:</h2>
-      <div id="map" style="height: 320px; max-width: 600px; margin: 0 auto 32px auto; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"></div>
-      <div id="weather-widget" style="max-width: 400px; margin: 0 auto; padding: 18px; background: #e0f7fa; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 1.1rem; color: #222;">
+      <div id="map"></div>
+      <div id="weather-widget">
         <span>Lade Wetterdaten...</span>
       </div>
     </section>
 
-    <!-- ERFAHRUNG -->
     <section id="erfahrung" class="erfahrung-container" aria-labelledby="erfahrung-title">
       <h2 id="erfahrung-title">Berufserfahrung</h2>
       <ul class="timeline">
-        <li style="list-style-type:none;">
-          <article style="margin:0; padding:0;">
-            <h3 style="display:inline; font-weight:bold; color:#3949ab;">ICT-Operations-Engineer <span class="at">· Abraxas Informatik AG</span></h3>
-            <span style="display:inline-block; margin-left:12px; color:#3949ab; font-size:1rem;">Nov 2020 – heute · Vollzeit · Zürich, Schweiz</span>
-            <ul style="margin-top:8px;">
+        <li>
+          <article>
+            <h3>ICT-Operations-Engineer <span class="at">· Abraxas Informatik AG</span></h3>
+            <span class="timeline-meta">Nov 2020 – heute · Vollzeit · Zürich, Schweiz</span>
+            <ul>
               <li>Betrieb und Weiterentwicklung von IP-Netzwerken und Systemlandschaften</li>
               <li>Incident-, Change- und Problem-Management in Enterprise-Umgebungen</li>
               <li>Automation, Härtung und Dokumentation nach Best Practices</li>
             </ul>
           </article>
         </li>
-        <li style="list-style-type:none;">
-          <article style="margin:0; padding:0;">
-            <h3 style="display:inline; font-weight:bold; color:#3949ab;">Informatiker / BMS <span class="at">· Berufsmaturitätsschule</span></h3>
-            <span style="display:inline-block; margin-left:12px; color:#3949ab; font-size:1rem;">Aug 2019 – Nov 2020 · 1 J 4 M</span>
-            <div style="margin-top:8px; color:#222;">Vertiefung Systemtechnik, Grundlagen Projekt- und Qualitätsmanagement.</div>
+        <li>
+          <article>
+            <h3>Informatiker / BMS <span class="at">· Berufsmaturitätsschule</span></h3>
+            <span class="timeline-meta">Aug 2019 – Nov 2020 · 1 J 4 M</span>
+            <div class="timeline-desc">Vertiefung Systemtechnik, Grundlagen Projekt- und Qualitätsmanagement.</div>
           </article>
         </li>
-        <li style="list-style-type:none;">
-          <article style="margin:0; padding:0;">
-            <h3 style="display:inline; font-weight:bold; color:#3949ab;">Informatiker in Ausbildung <span class="at">· GENESIS Swiss Team AG</span></h3>
-            <span style="display:inline-block; margin-left:12px; color:#3949ab; font-size:1rem;">Aug 2015 – Aug 2019 · 4 J 1 M</span>
-            <div style="margin-top:8px; color:#222;">Grundausbildung Systemtechnik, Support und Betrieb in Kundenprojekten.</div>
+        <li>
+          <article>
+            <h3>Informatiker in Ausbildung <span class="at">· GENESIS Swiss Team AG</span></h3>
+            <span class="timeline-meta">Aug 2015 – Aug 2019 · 4 J 1 M</span>
+            <div class="timeline-desc">Grundausbildung Systemtechnik, Support und Betrieb in Kundenprojekten.</div>
           </article>
         </li>
       </ul>
     </section>
 
-    <!-- AUSBILDUNG -->
-  <section id="ausbildung" class="ausbildung-container" aria-labelledby="ausbildung-title">
+    <section id="ausbildung" class="ausbildung-container" aria-labelledby="ausbildung-title">
       <h2 id="ausbildung-title">Ausbildung</h2>
       <ul class="list">
-        <li style="margin-bottom: 0;">
-          <h3 style="margin-bottom: 0;">Berner Fachhochschule BFH · Bachelor of Science (Informatik)</h3>
-          <p style="margin-top: 0; margin-bottom: 0;">
+        <li>
+          <h3>Berner Fachhochschule BFH · Bachelor of Science (Informatik)</h3>
+          <p>
             <time datetime="2022-09">Sep 2022</time> – <time datetime="2026-09">Sep 2026</time>
           </p>
         </li>
-        <li style="margin-bottom: 0;">
-          <h3 style="margin-bottom: 0;">Berufsmaturitätsschule Bern · Informatiker Systemtechnik</h3>
-          <p style="margin-top: 0; margin-bottom: 0;">
+        <li>
+          <h3>Berufsmaturitätsschule Bern · Informatiker Systemtechnik</h3>
+          <p>
             <time datetime="2019">2019</time> – <time datetime="2020">2020</time>
           </p>
         </li>
       </ul>
     </section>
 
-    <!-- ZERTIFIKATE -->
-  <section id="zertifikate" class="zertifikate-container" aria-labelledby="zertifikate-title">
+    <section id="zertifikate" class="zertifikate-container" aria-labelledby="zertifikate-title">
       <h2 id="zertifikate-title">Zertifikate</h2>
       <ul class="badges">
         <li><strong>Veeam Certified Engineer (VMCE)</strong> · Ausgestellt: Feb 2024</li>
       </ul>
     </section>
 
-    <!-- FAEHIGKEITEN -->
-  <section id="faehigkeiten" class="faehigkeiten-container" aria-labelledby="faehigkeiten-title">
+    <section id="faehigkeiten" class="faehigkeiten-container" aria-labelledby="faehigkeiten-title">
       <h2 id="faehigkeiten-title">Fähigkeiten</h2>
-      <div style="max-width: 500px; margin: 32px auto;">
+      <div class="chart-wrapper">
         <canvas id="skillsChart" width="400" height="300" aria-label="Skill Chart"></canvas>
       </div>
     </section>
 
-
-    <!-- KONTAKT -->
-  <section id="kontakt" class="kontakt-container" aria-labelledby="kontakt-title">
+    <section id="kontakt" class="kontakt-container" aria-labelledby="kontakt-title">
       <h2 id="kontakt-title">Kontakt</h2>
       <address>
         <p><strong>Mussa Khan Afridi</strong></p>
-        <!-- Ersetzen/Ergaenzen Sie die Mail bei Bedarf -->
         <p>E-Mail: <a href="mailto:afrim1@bfh.ch">donottry@phishing.com</a></p>
         <p>Region: Bern · Schweiz</p>
       </address>
     </section>
   </main>
 
-  <footer role="contentinfo" style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <p style="margin: 0;">&copy; <span data-year></span> Portfolio · Mussa Khan Afridi</p>
+  <footer role="contentinfo">
+    <p>&copy; <span id="year"></span> Portfolio · Mussa Khan Afridi</p>
     <div class="footer-contact">
-  <a href="#" id="gorilla-link" style="color: #ffd86b; text-decoration: underline; font-weight: bold; font-size: 1.1rem;">Der Notenvergeber selbst!</a>
+      <a href="#" id="gorilla-link">Der Notenvergeber selbst!</a>
     </div>
   </footer>
-  <script src="fun.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="fun.js"></script>
 </body>

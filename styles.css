@@ -1,41 +1,37 @@
-/* Zusätzliche Media Queries für Feinschliff auf kleinen Geräten */
-@media (max-width: 400px) {
-	html, body {
-		font-size: 14px;
-	}
-	header h1 {
-		font-size: 1.1rem;
-	}
-	.profile-img {
-		width: 80px;
-		height: 80px;
-	}
-	section {
-		padding: 16px 0;
-		margin-bottom: 24px;
-	}
-	#map {
-		height: 180px !important;
-		min-width: 0 !important;
-		border-radius: 10px;
-	}
-	#skillsChart {
-		width: 100% !important;
-		height: 180px !important;
-	}
-	.container {
-		padding: 8px;
-	}
-	.footer-contact {
-		padding-right: 8px;
-		font-size: 0.9rem;
-	}
+html, body {
+	margin: 0;
 }
-/* Lustiger Zug SVG Hintergrund im Header */
+
+/* Header Styles */
 header {
 	position: relative;
 	overflow: visible;
 }
+
+.header-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 32px 0;
+	overflow: hidden;
+}
+
+.header-background {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	opacity: 0.35;
+}
+
+.header-content {
+	position: relative;
+	z-index: 1;
+}
+
 header .profile-img,
 header h1,
 header .subtitle,
@@ -100,18 +96,95 @@ body::after {
 	animation: trainMove 25s linear infinite;
 	animation-delay: -7s;
 }
-/* Kontakt im Footer rechtsbündig */
-.footer-contact {
-	text-align: right;
-	padding-right: 32px;
-	color: #fff;
+/* Header Content */
+header h1 {
+	margin: 0;
+	font-size: 2.5rem;
+	letter-spacing: 2px;
 }
+
+.subtitle {
+	margin: 8px 0 0 0;
+	font-size: 1.2rem;
+}
+
+.meta {
+	list-style: none;
+	padding: 0;
+	margin: 16px 0 0 0;
+}
+
+.meta li {
+	margin-bottom: 4px;
+}
+
+/* Main Content */
+.fun-btn-wrapper {
+	text-align: center;
+	margin: 32px 0;
+}
+
+#fun-btn {
+	padding: 12px 24px;
+	border-radius: 20px;
+	background: #ffd86b;
+	color: #222;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	font-size: 1.1rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+section {
+	margin-bottom: 40px;
+	padding: 32px 0;
+	border-radius: 18px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+/* Section Containers */
+.profil-container,
+.erfahrung-container,
+.ausbildung-container,
+.zertifikate-container,
+.faehigkeiten-container,
+.kontakt-container {
+	text-align: center;
+}
+
+.profil-container {
+	background: #ffe4ec;
+}
+
+.erfahrung-container {
+	background: #e0f7fa;
+}
+
+.ausbildung-container {
+	background: #fff9c4;
+}
+
+.zertifikate-container {
+	background: #e1bee7;
+}
+
+.faehigkeiten-container {
+	background: #c8e6c9;
+}
+
+.kontakt-container {
+	background: #d1c4e9;
+}
+
+/* Lists */
 .list {
 	display: block;
 	padding-left: 0;
 	margin: 0 auto;
 	max-width: 600px;
 }
+
 .list li {
 	display: list-item;
 	margin-bottom: 12px;
@@ -125,18 +198,26 @@ body::after {
 	text-align: left;
 	list-style: disc inside;
 }
-/* Verhindert Zeilenumbruch nach dem Aufzählungspunkt bei Ausbildungstiteln */
+
 .list li h3 {
 	display: inline;
+	margin-bottom: 0;
 }
+
+.list li p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .timeline {
 	display: block;
 	padding-left: 0;
 	margin: 0 auto;
 	max-width: 600px;
 }
+
 .timeline li {
-	display: list-item;
+	list-style: none;
 	margin-bottom: 18px;
 	background: #e0f7fa;
 	color: #4e54c8;
@@ -146,17 +227,46 @@ body::after {
 	font-weight: 500;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 	text-align: left;
-	list-style: disc inside;
 }
+
+.timeline article {
+	margin: 0;
+	padding: 0;
+}
+
+.timeline h3 {
+	display: inline;
+	font-weight: bold;
+	color: #3949ab;
+}
+
+.timeline-meta {
+	display: inline-block;
+	margin-left: 12px;
+	color: #3949ab;
+	font-size: 1rem;
+}
+
+.timeline ul {
+	margin-top: 8px;
+}
+
+.timeline-desc {
+	margin-top: 8px;
+	color: #222;
+}
+
 .highlights {
 	display: block;
 	padding-left: 0;
 	margin: 0 auto;
 	max-width: 600px;
 }
+
 .highlights ul {
 	padding-left: 0;
 }
+
 .highlights li {
 	display: list-item;
 	margin-bottom: 8px;
@@ -170,12 +280,14 @@ body::after {
 	text-align: left;
 	list-style: disc inside;
 }
+
 .badges {
 	display: block;
 	padding-left: 0;
 	margin: 0 auto;
 	max-width: 400px;
 }
+
 .badges li {
 	display: list-item;
 	margin-bottom: 8px;
@@ -189,131 +301,93 @@ body::after {
 	text-align: left;
 	list-style: disc inside;
 }
-html, body {
-    margin: 0;
-}
 
-.profil-container {
-	background: #ffe4ec;
-	text-align: center;
-}
-.erfahrung-container {
-	background: #e0f7fa;
-	text-align: center;
-}
-.ausbildung-container {
-	background: #fff9c4;
-	text-align: center;
-}
-.zertifikate-container {
-	background: #e1bee7;
-	text-align: center;
-}
-.faehigkeiten-container {
-	background: #c8e6c9;
-	text-align: center;
-}
-.kontakt-container {
-	background: #d1c4e9;
-	text-align: center;
-}
-
-header h1 {
-	margin: 0;
-	font-size: 2.5rem;
-	letter-spacing: 2px;
-}
-
-nav {
-	margin-top: 20px;
-}
-
-/* Link-Stile können bei Bedarf ergänzt werden */
-section {
-    margin-bottom: 40px;
-    padding: 32px 0;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-}
-
-#profil {
-	background: #f7fafc;
-	text-align: center;
-}
-#erfahrung {
-	background: #f0f4ff;
-	text-align: center;
-}
-#ausbildung {
-	background: #f9f7fd;
-	text-align: center;
-}
-#zertifikate {
-	background: #f6fff7;
-	text-align: center;
-}
-#faehigkeiten {
-	background: #f7faff;
-	text-align: center;
-}
-#portfolio {
-    background: #fff8f6;
-}
-
-/* Entfernt den hellen Streifen zwischen Extras (Bern/Wetter) und Berufserfahrung */
+/* Extras Section */
 #extras {
+	margin: 48px 0;
+	text-align: center;
 	margin-bottom: 0 !important;
 	box-shadow: none;
 	border-radius: 0;
 }
 
-/* Entfernt den weißen Strich vor Ausbildung */
+#map {
+	height: 320px;
+	max-width: 600px;
+	margin: 0 auto 32px auto;
+	border-radius: 16px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+#weather-widget {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 18px;
+	background: #e0f7fa;
+	border-radius: 16px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+	font-size: 1.1rem;
+	color: #222;
+}
+
+.chart-wrapper {
+	max-width: 500px;
+	margin: 32px auto;
+}
+
+/* Footer */
+footer {
+	text-align: left;
+	padding: 24px 0;
+	padding-left: 32px;
+	background: #4e54c8;
+	color: #fff;
+	margin-top: 0 !important;
+	border-radius: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+footer p {
+	margin: 0;
+}
+
+.footer-contact {
+	text-align: right;
+	padding-right: 32px;
+	color: #fff;
+}
+
+#gorilla-link {
+	color: #ffd86b;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+/* Section Margins - Remove white lines */
+#erfahrung {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
 #ausbildung {
 	margin-top: 0 !important;
-}
-
-/* Entfernt den weißen Strich zwischen Berufserfahrung und Ausbildung */
-#erfahrung {
 	margin-bottom: 0 !important;
 }
 
-/* Entfernt den weißen Strich zwischen Ausbildung und Zertifikate */
-#ausbildung {
-	margin-bottom: 0 !important;
-}
-
-/* Entfernt den weißen Strich zwischen Zertifikate und Fähigkeiten */
 #zertifikate {
 	margin-bottom: 0 !important;
 }
 
-/* Entfernt den weißen Strich vor Kontakt */
-#kontakt {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-
-/* Entfernt den weißen Strich zwischen Fähigkeiten und Kontakt */
 #faehigkeiten {
 	margin-bottom: 0 !important;
 }
 
-/* Entfernt den weißen Strich zwischen Kontakt und Footer */
-footer {
+#kontakt {
 	margin-top: 0 !important;
-}
-
-nav a:hover {
-	color: #ffd86b;
-}
-
-.container {
-	max-width: 900px;
-	margin: 40px auto;
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-	padding: 32px;
+	margin-bottom: 0 !important;
 }
 
 .profile-img {
@@ -325,95 +399,60 @@ nav a:hover {
 	margin-bottom: 18px;
 }
 
-.skills {
-	display: block;
-	padding-left: 0;
-	margin: 0 auto;
-	max-width: 400px;
-}
-.skills li {
-	display: list-item;
-	margin-bottom: 8px;
-	background: #e0e1f6;
-	color: #4e54c8;
-	padding: 8px 18px;
-	border-radius: 20px;
-	font-size: 1rem;
-	font-weight: 500;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-	text-align: left;
-	list-style: disc inside;
-}
-
-.skill {
-	background: #e0e1f6;
-	color: #4e54c8;
-	padding: 8px 18px;
-	border-radius: 20px;
-	font-size: 1rem;
-	font-weight: 500;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-
-.projects {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-	gap: 24px;
-}
-
-.project-card {
-	background: #f7f8fd;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-	padding: 20px;
-	transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-	transform: translateY(-4px) scale(1.03);
-	box-shadow: 0 6px 24px rgba(78,84,200,0.12);
-}
-
-.project-card h3 {
-	margin-top: 0;
-	color: #4e54c8;
-}
-
-.project-card p {
-	color: #444;
-}
-
-footer {
-	text-align: left;
-	padding: 24px 0;
-	background: #4e54c8;
-	color: #fff;
-	margin-top: 40px;
-	border-radius: 0 0 12px 12px;
-	padding-left: 32px;
-}
-
+/* Media Queries */
 @media (max-width: 600px) {
-		.container {
-			padding: 16px;
-		}
-		header h1 {
-			font-size: 1.6rem;
-		}
-		section h2 {
-			font-size: 1.2rem;
-		}
-		.projects {
-			grid-template-columns: 1fr;
-		}
-		#map {
-			height: 220px !important;
-			min-width: 0 !important;
-			border-radius: 12px;
-		}
-		#skillsChart {
-			width: 100% !important;
-			height: 220px !important;
-		}
+	header h1 {
+		font-size: 1.6rem;
 	}
+	
+	section h2 {
+		font-size: 1.2rem;
+	}
+	
+	#map {
+		height: 220px !important;
+		min-width: 0 !important;
+		border-radius: 12px;
+	}
+	
+	#skillsChart {
+		width: 100% !important;
+		height: 220px !important;
+	}
+}
 
+@media (max-width: 400px) {
+	html, body {
+		font-size: 14px;
+	}
+	
+	header h1 {
+		font-size: 1.1rem;
+	}
+	
+	.profile-img {
+		width: 80px;
+		height: 80px;
+	}
+	
+	section {
+		padding: 16px 0;
+		margin-bottom: 24px;
+	}
+	
+	#map {
+		height: 180px !important;
+		min-width: 0 !important;
+		border-radius: 10px;
+	}
+	
+	#skillsChart {
+		width: 100% !important;
+		height: 180px !important;
+	}
+	
+	.footer-contact {
+		padding-right: 8px;
+		font-size: 0.9rem;
+	}
+}
